@@ -1,7 +1,11 @@
-html {
-  max-width: 720px;
+.card > p {
+  color: rgb(31, 136, 59);
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke: 1px blue;
 }
-
-body {
-  background: #fff;
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  font-display: swap;
 }

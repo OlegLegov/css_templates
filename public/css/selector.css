@@ -1,0 +1,44 @@
+html {
+  max-width: 720px;
+}
+
+body {
+  background: #fff;
+}
+
+* {
+  color: blue;
+}
+
+.box {
+  background: #b9cad4;
+}
+
+#user {
+  color: blue;
+}
+
+h1,
+h2 {
+  color: darkgreen;
+}
+
+div > p {
+  color: brown;
+}
+
+.card-dark {
+  background: #ebe9e9;
+}
+
+.item {
+  color: #d112e7;
+}
+
+.item:first-child {
+  color: blue;
+}
+
+#test {
+  color: brown;
+}
