@@ -23,7 +23,8 @@
 }
 
 .page-content {
-  max-width: 960px;
+  font-family: 'Roboto';
+  max-width: 1000px;
   margin: 0 auto;
   width: 100%;
   display: flex;
@@ -97,124 +98,166 @@
   font-weight: var(--weight-title);
 }
 
-.hero {
+.main {
   display: flex;
   align-items: center;
   gap: var(--space-b);
-  padding: var(--space-b);
-  border-bottom: 1px solid var(--color-border);
+  padding: 0px;
+  gap: 80px;
 }
 
-.hero_image {
+.main_image {
   width: 500px;
   height: 500px;
   border-radius: var(--border-radius);
 }
 
-.hero_content {
+.main_content {
   display: flex;
   flex-direction: column;
   gap: var(--space-l);
 }
 
-.hero_title {
-  font-size: 50px;
-  color: var(--color-title);
-  font-weight: var(--weight-title);
+.main_title {
+  width: 420px;
+  height: 86px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
   line-height: 120%;
-}
-
-.hero_text {
-  font-size: var(--size-l);
-  color: var(--color-text);
-  font-weight: var(--weight-text);
-  line-height: 170%;
-}
-
-.blog {
   display: flex;
-  gap: var(--space-b);
-  padding: var(--space-b);
-  border-bottom: 1px solid var(--color-border);
+  align-items: center;
+  letter-spacing: -0.8px;
+  color: #5a5a5a;
+}
+
+.main_text {
+  width: 420px;
+  height: 80px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 170%;
+  display: flex;
+  align-items: center;
+  color: #5a5a5a;
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 52px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: var(--space-l);
+  text-align: start;
+}
+
+.card > *:not(:last-child) {
+  margin-bottom: var(--space-l);
 }
 
 .card_image {
-  height: 140px;
-  width: 140px;
-  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  background: #0d6efd;
+  border-radius: 12px;
 }
 
 .card_title {
+  font-style: normal;
+  font-weight: 500;
   font-size: 32px;
-  font-weight: var(--weight-title);
-  color: var(--color-title);
+  line-height: 100%;
+  color: #212529;
 }
 
 .card_text {
-  font-size: var(--size-d);
-  font-weight: var(--weight-text);
-  color: var(--color-text);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 170%;
+  color: #212529;
 }
 
 .button {
   display: inline-block;
   font-size: var(--size-d);
   text-decoration: none;
+  font-weight: 400;
+  line-height: 80%;
   padding: var(--space-m) var(--space-xm);
-  border-radius: var(--border-radius);
+  border-radius: 4px;
+  width: 120px;
+  height: 36px;
 }
 
 .button:hover {
   opacity: 0.7;
 }
 
-.card_button {
+.main_button {
   color: white;
-  background-color: var(--color-primary);
+  background-color: #6c757d;
+}
+
+.card_button {
+  width: 96px;
+  height: 26px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-decoration-line: underline;
+  color: #0d6efd;
+  position: absolute;
+  top: 1010px;
 }
 
 .card_button:hover {
   opacity: 0.7;
 }
 
-.form {
+.actions {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--color-primary);
   padding: var(--space-l);
-  border-radius: var(--border-radius);
+  justify-content: space-between;
+  border-radius: 8px;
+  background: #563d7c;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
 }
 
-.form_content {
+.form {
   display: flex;
+  width: 240px;
   flex-direction: column;
+  align-items: flex-start;
   gap: var(--space-m);
 }
 
-.form_title {
-  font-size: 27px;
-  font-weight: var(--weight-title);
-  color: white;
+.form_heading {
+  color: #fff;
+  font-size: var(--space-l);
+  line-height: 16px;
 }
 
-.form_info {
-  font-size: var(--size-d);
-  font-weight: var(--weight-text);
-  color: white;
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 240px;
+  height: 50px;
+  border-radius: 4.8px;
+  background: #fff;
+  color: #212529;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
 }
 
-.form_button {
-  background-color: white;
-  width: 100%;
-  max-width: 160px;
-  color: var(--color-text);
+.btn:hover {
+  opacity: 0.9;
 }
