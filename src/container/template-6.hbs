@@ -1,0 +1,102 @@
+{{! 
+Це код container файлу для index сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+ }}
+  
+<header class='header'>
+  <div>
+    {{> logo}}
+  </div>
+  <nav class='header_nav'>
+    <div class="header_nav_right">
+      {{> nav list=header}}
+    </div>
+  </nav>
+</header>
+
+<main class="main">
+  <div class="info">
+    <h1 class="info_title">{{info.title}}</h1>
+    <p class="info_description">{{info.description}}</p>
+  </div>
+
+  {{#with form}}
+  	<form class="form">
+      <h2 class="form_title">{{title}}</h2>
+      <div class="form_input_list">
+        {{#each inputs}}
+          <input type="{{type}}" placeholder="{{placeholder}}" class="form_input" name="{{name}}" id="form-input-{{id}}">
+        {{/each}}
+      </div>
+      <div class="form_checkbox">
+        <input type="checkbox" name="{{checkbox.name}}" id="{{checkbox.name}}">
+        <label for="checkbox.name">{{checkbox.label}}</label>
+      </div>
+      <button type="submit" class="form_button">{{button}}</button>
+      <div class="hr"></div>
+      <p class="form_info">{{info}}</h2>
+    </form>
+  {{/with}}
+</main>
+
+<div class="updates">
+  {{#with updates}}
+    <div class="layout_strong">
+      <strong>{{title}}</strong>
+    </div>
+    {{#each list}}
+      <div class="list">
+        <div class='svg'>
+          {{#if @first}}
+		  	    <img src="/svg/32_32_1.svg">
+				  {{/if}}
+          {{#unless @last}}
+            {{#if @index}}
+              <img src="/svg/32_32_2.svg">
+            {{/if}}
+          {{/unless}}
+          {{#if @last}}
+            <img src="/svg/32_32_3.svg">
+          {{/if}}            
+		    </div>
+        <div class="media">
+          <h3 class="nickname">{{nickname}}</h3>
+          <p class="description">{{description}}</p>
+        </div>
+      </div>
+    {{/each}}
+    {{#with show_all}}
+      <a class="link" href="{{url}}">{{text}}</a>
+    {{/with}}
+  {{/with}}
+</div>
+
+{{#with expirience}}
+  <div class="expirience">
+    <strong>{{title}}</strong>
+    <span class="badge">{{badge}}</span>
+    <div class="listExp">
+      {{#each list}}
+        <div>
+          <span>{{name}}</span>
+          <p>{{details}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+{{/with}}
+
+<footer class="footer">
+  <div>
+      {{> logo}}
+      <span class="footer_copyright">Copyright 2023-2024</span>
+  </div>
+  {{#each footer}}
+    <div>
+      <span class="footer_title">{{title}}</span>
+      {{> nav list=links isVertical=true}}
+    </div>
+  {{/each}}
+</footer>
+
+
