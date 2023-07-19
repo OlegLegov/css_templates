@@ -1,0 +1,17 @@
+.page {
+  display: flex;
+  width: 1920px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  background: #111827;
+}
+
+.page-content {
+  display: flex;
+  width: 1150px;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  flex-shrink: 0;
+}
