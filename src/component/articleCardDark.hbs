@@ -1,0 +1,11 @@
+{{#each data}}
+  <div class='cardDark'>
+    <div class='card_image'
+      style='background-image: url({{photo}})'/>
+      {{#if isNew}}<span class="img_badge">NEW</span>{{/if}}
+    </div>
+    <h5 class='card-title'>{{name}}</h5>
+    <p class='card-text'>{{description}}</p>
+    <button class='card_btn'>Read All</button>
+  </div>
+{{/each}}
