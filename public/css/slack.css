@@ -246,7 +246,7 @@ body {
     }
 
     .features_grid_4 {
-      grid-template-columns: (3, 1fr);
+      grid-template-columns: (4, 1fr);
     }
 
     .features_grid_4 > .feat_card:first-of-type {
